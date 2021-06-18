@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod-secutrity-context-pod
+  labels:
+    app: my-pod-secutrity-context-labels
+  namespace: dev  
+spec:
+  #securityContext:
+  #  runAsUser: 1000
+  containers:
+  - name: ubuntu
+    image: ubuntu
+    command: ["sleep", "40000000"]
+    #securityContext:
+    #  runAsUser: 900
+    #  capabilities:
+    #    add: ["MAC_ADMIN"] 
+  serviceAccountName: my-service-account

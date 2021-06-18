@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: restfull-deployment
+  labels:
+    app: my-deployment
+  namespace: dev  
+spec:
+  template:
+    metadata:
+      name: restfull-pod-name
+      labels:
+        app: restfull-pod-labels
+    spec:
+      containers:
+      - name: restfull
+        image: maurorc89/restfull:1.0.0
+      nodeSelector:
+        type: worker2  
+  selector:
+    matchLabels:
+      app: restfull-pod-labels
+  replicas: 5  

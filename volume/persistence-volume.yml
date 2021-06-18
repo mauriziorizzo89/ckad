@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistenceVolume
+metadata:
+  name: my-ps
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 1Gi
+  hostPath:
+    path: /tmp/data  
+

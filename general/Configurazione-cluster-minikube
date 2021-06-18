@@ -1,0 +1,3 @@
+Configurazione cluster minikube:
+
+minikube start --driver=docker --nodes 3 -p mr-cluster

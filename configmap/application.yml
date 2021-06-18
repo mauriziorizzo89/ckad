@@ -1,0 +1,9 @@
+host: www.x.it
+logging:
+  pattern:
+    console:  "%clr(%d{ISO8601}){blue} - MDC.ID: [%X{MDC.ID}] - %clr(%-5p) %clr(${PID}){faint} %clr(---){faint} %clr([%8.15t]){cyan} %clr(%-40.40logger{0}){blue} %clr(:){red} %clr(%m){faint}%n"
+  level:
+    root: info
+    org.springframework.web: debug
+    org.springframework.boot.actuate.health: info
+    org.springframework.web.servlet: info

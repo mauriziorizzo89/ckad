@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp-service
+spec:
+ type: NodePort
+ ports:
+ - targetPort: 80 #porta del contariner
+   port: 80 # obbligatoria, porta del servizio
+   nodePort: 30008 #porta del nodo gestita dal servizio
+selector:
+ app: myapp
+ type: front-end
+

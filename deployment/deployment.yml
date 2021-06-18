@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: my-deployment
+  labels:
+    app: my-deployment-label
+  namespace: dev  
+spec:
+  template:
+      metadata:
+        name: my-podname
+        labels:
+          app: my-podname-label
+      spec:
+        containers:
+        - name: nginx-container
+          image: nginx
+          envFrom:
+            - configMapRef:
+                name: my-configmap
+  selector:
+    matchLabels:
+      app: my-podname-label
+  replicas: 5     

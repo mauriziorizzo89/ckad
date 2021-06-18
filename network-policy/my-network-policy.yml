@@ -1,0 +1,32 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: my-network-policy
+spec:
+  podSelector:
+    matchLabels:
+      role: db # identifica il pod a cui associare la regola
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          name: api-pod # pod per il quale si accetta traffico
+      namespaceSelector:
+        matchLabels:
+          name: prod  
+    - ipBlock:
+        cidr:  192.168.5.10/32      
+    ports:
+    - protocol: TCP
+      port: 3306 #porta dalla quale il pod esterno può contattarci
+  egress:
+  - to:
+    - ipBlock:
+      cidr: 192.168.5.10/32 #il pod potrà essere in grado di raggiungere questa subnet
+    ports:
+      - protocol: TCP
+        port: 80    
+    
