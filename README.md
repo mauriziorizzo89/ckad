@@ -1,4 +1,4 @@
-# Local Kuberentes cluster configurazion
+# Local Kuberentes cluster configurazion with 3 worker nodes
 
 
  minikube start --nodes 3 -p mr-cluster
