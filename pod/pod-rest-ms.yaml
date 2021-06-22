@@ -7,5 +7,5 @@ metadata:
   namespace: cellar
 spec:
  containers:
- - image: rest-ms/1.0.0
+ - image: docker.io/mauriziorizzo89/rest-ms:1.0.0
    name: rest-ms-container
