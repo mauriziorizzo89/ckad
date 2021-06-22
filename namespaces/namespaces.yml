@@ -1,4 +1,14 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: dev
+  name: dev-ms
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: test-ms
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: cellar-ms  

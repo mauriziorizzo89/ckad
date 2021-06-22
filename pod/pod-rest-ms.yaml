@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rest-ms-pord
+  labels: 
+     app: my-rest-ms
+  namespace: cellar
+spec:
+ containers:
+ - image: rest-ms/1.0.0
+   name: rest-ms-container
