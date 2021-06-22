@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: rest-ms-pord
+  name: rest-ms-pod
   labels: 
      app: my-rest-ms
   namespace: cellar
