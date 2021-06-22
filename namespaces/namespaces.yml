@@ -1,31 +1,20 @@
+  
 apiVersion: v1
 kind: Namespace
 metadata:
-<<<<<<< HEAD
-  name: dev-ms
-=======
   name: dev-core-ms
->>>>>>> fb922f18df5e85ed0581ef89b598168ea89e3d79
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
-<<<<<<< HEAD
-  name: test-ms
-=======
   name: test-core-ms
->>>>>>> fb922f18df5e85ed0581ef89b598168ea89e3d79
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
-<<<<<<< HEAD
-  name: cellar-ms  
-=======
   name: monitor-tools
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
    name: cellar
->>>>>>> fb922f18df5e85ed0581ef89b598168ea89e3d79
