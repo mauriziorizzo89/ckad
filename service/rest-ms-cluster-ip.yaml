@@ -2,5 +2,11 @@ apiVersion: v1
 kind: Service
 metadata:
   name: rest-ms-service
+  namespace: cellar
 spec:
-  port:
+  selector:
+    app: my-rest-ms
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
